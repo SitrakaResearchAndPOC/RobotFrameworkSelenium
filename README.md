@@ -126,7 +126,7 @@ LoginTest
 
 *** Keywords ***
 LoginToApplication
-        # xpath du logo : //a[@class='ico-login']
+    # xpath du login : //a[@class='ico-login']
     Click Link    xpath://a[@class='ico-login']
     Sleep  3s
 
@@ -135,6 +135,35 @@ LoginToApplication
 
     Input Text  name:Password   Test@123
     Sleep  3s
+```
+
+# InputBox 
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${BROWSER}    chrome
+${URL}        https://demo.nopcommerce.com
+${EMAIL_TXT}  id:Email
+
+*** Test Cases ***
+TestingInputBox
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+
+    Title Should Be    nopCommerce demo store. Home page title
+
+    Click Link    xpath://a[@class='ico-login']
+    Sleep    2s
+
+    Element Should Be Visible    ${EMAIL_TXT}
+    Element Should Be Enabled    ${EMAIL_TXT}
+
+    Sleep    1h
+```
+
+
 
     Click Element   xpath://button[normalize-space()='Log in']
 ```
