@@ -81,8 +81,7 @@ TC1
     open browser  ${URL}  ${BROW}
     sleep  1h
 ```
-# Application TC
-```
+# Application LoginTest
 *** Settings ***
 Library    SeleniumLibrary
 
@@ -91,7 +90,7 @@ ${browser}  chrome
 ${url}  https://demo.nopcommerce.com
 
 *** Test Cases ***
-TC
+LoginTest
     Open Browser   ${url}  ${browser}
 
     # xpath du logo : //a[@class='ico-login']
@@ -107,4 +106,3 @@ TC
     Click Element   xpath://button[normalize-space()='Log in']
 
     Sleep  1h
-```
