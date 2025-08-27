@@ -1,0 +1,65 @@
+import os
+from openpyxl import load_workbook
+from openpyxl.styles import PatternFill
+from playwright.sync_api import sync_playwright, TimeoutError
+
+def tester_login(username: str, password: str) -> bool:
+    """Retourne True si le dashboard apparaît, sinon False"""
+    with sync_playwright() as p:
+        browser = p.firefox.launch(headless=False)
+        page = browser.new_page()
+        try:
+            page.goto(
+                "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+                timeout=60000,
+                wait_until="domcontentloaded"
+            )
+            page.get_by_role("textbox", name="Username").fill(str(username))
+            page.get_by_role("textbox", name="Password").fill(str(password))
+            page.get_by_role("button", name="Login").click()
+
+            # Attendre que le dashboard apparaisse (jusqu'à 5 secondes)
+            try:
+                page.get_by_role("heading", name="Dashboard").wait_for(timeout=5000)
+                print(f"[{username}] Connexion réussie ✅")
+                return True
+            except TimeoutError:
+                print(f"[{username}] Connexion échouée ❌")
+                return False
+
+        finally:
+            browser.close()
+
+
+if __name__ == "__main__":
+    excel_path = os.path.join(os.path.dirname(__file__), "test.xlsx")
+    if not os.path.exists(excel_path):
+        raise FileNotFoundError(f"❌ Fichier introuvable : {excel_path}")
+
+    wb = load_workbook(excel_path)
+    ws = wb.active
+
+    # Styles pour PASS / FAIL
+    green_fill = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
+    red_fill = PatternFill(start_color="F2DCDB", end_color="F2DCDB", fill_type="solid")
+
+    for row in ws.iter_rows(min_row=2, max_col=2, values_only=False):
+        user = str(row[0].value).strip()
+        pwd = str(row[1].value).strip()
+
+        print(f"\n--- Test: {user} / {pwd} ---")
+        success = tester_login(user, pwd)
+
+        # Écrire PASS/FAIL dans la colonne C et appliquer la couleur
+        status_cell = ws.cell(row=row[0].row, column=3)
+        if success:
+            status_cell.value = "PASS"
+            status_cell.fill = green_fill
+        else:
+            status_cell.value = "FAIL"
+            status_cell.fill = red_fill
+
+    # Sauvegarde dans un nouveau fichier
+    result_path = os.path.join(os.path.dirname(__file__), "logins_result.xlsx")
+    wb.save(result_path)
+    print(f"\n✅ Tests terminés, résultats enregistrés dans {result_path}")
