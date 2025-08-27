@@ -31,3 +31,46 @@ TC1
     open browser  https://demo.nopcommerce.com   chrome
     sleep  1h
 ```
+
+## Open Browser with variable
+```
+*** Settings ***
+Library   SeleniumLibrary
+
+*** Variables ***
+${URL}  https://demo.nopcommerce.com 
+${BROW}  chrome
+*** Test Cases ***
+TC1
+    # Les test
+    open browser  ${URL}  ${BROW}
+    sleep  1h
+```
+
+```
+*** Settings ***
+Library   SeleniumLibrary
+
+*** Variables ***
+${URL}  https://demo.nopcommerce.com 
+${BROW}  edge
+*** Test Cases ***
+TC1
+    # Les test
+    open browser  ${URL}  ${BROW}
+    sleep  1h
+```
+
+```
+*** Settings ***
+Library   SeleniumLibrary
+
+*** Variables ***
+${URL}  https://demo.nopcommerce.com 
+${BROW}  firefox
+*** Test Cases ***
+TC1
+    # Les test
+    open browser  ${URL}  ${BROW}
+    sleep  1h
+```
