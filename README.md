@@ -1,4 +1,17 @@
 # RobotFrameworkSelenium
+* Installation python / cocher toutes les options
+[python](https://www.python.org/downloads/)
+* Installation pycharm / cocher toutes les options
+[pycharm](https://www.jetbrains.com/fr-fr/pycharm/download/download-thanks.html?platform=windows)
+* Demarrez pycharm et installer :
+Installer via terminal de pycharm :
+```
+pip install selenium webdriver-manager
+````
+```
+pip install robotframework robotframework-seleniumlibrary
+````
+Installer plugin : 
 
 ## Learning first code 1 
 Fichier TC1.robot
