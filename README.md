@@ -107,3 +107,34 @@ LoginTest
     Click Element   xpath://button[normalize-space()='Log in']
 
     Sleep  1h
+```
+
+# Application LoginTest Keywords
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${browser}  chrome
+${url}  https://demo.nopcommerce.com
+
+*** Test Cases ***
+LoginTest
+    Open Browser   ${url}  ${browser}
+    LoginToApplication
+    Sleep  1h
+
+*** Keywords ***
+LoginToApplication
+        # xpath du logo : //a[@class='ico-login']
+    Click Link    xpath://a[@class='ico-login']
+    Sleep  3s
+
+    Input Text  name:Email  pavanoltraining@gmail.com
+    Sleep  3s
+
+    Input Text  name:Password   Test@123
+    Sleep  3s
+
+    Click Element   xpath://button[normalize-space()='Log in']
+```
