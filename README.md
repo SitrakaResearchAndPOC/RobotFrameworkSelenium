@@ -81,3 +81,30 @@ TC1
     open browser  ${URL}  ${BROW}
     sleep  1h
 ```
+# Application TC
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${browser}  chrome
+${url}  https://demo.nopcommerce.com
+
+*** Test Cases ***
+TC
+    Open Browser   ${url}  ${browser}
+
+    # xpath du logo : //a[@class='ico-login']
+    Click Link    xpath://a[@class='ico-login']
+    Sleep  3s
+
+    Input Text  name:Email  pavanoltraining@gmail.com
+    Sleep  3s
+
+    Input Text  name:Password   Test@123
+    Sleep  3s
+
+    Click Element   xpath://button[normalize-space()='Log in']
+
+    Sleep  1h
+```
