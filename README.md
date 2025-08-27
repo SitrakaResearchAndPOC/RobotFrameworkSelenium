@@ -11,7 +11,11 @@ pip install selenium webdriver-manager
 ```
 pip install robotframework robotframework-seleniumlibrary
 ````
-Installer plugin : 
+````
+pip install playwright
+````
+
+Installer plugin : Hyper roboframework
 
 ## Learning first code 1 
 Fichier TC1.robot
