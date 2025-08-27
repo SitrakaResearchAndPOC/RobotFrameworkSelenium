@@ -135,6 +135,7 @@ LoginToApplication
 
     Input Text  name:Password   Test@123
     Sleep  3s
+    Click Element   xpath://button[normalize-space()='Log in']
 ```
 
 # InputBox 
@@ -159,11 +160,8 @@ TestingInputBox
 
     Element Should Be Visible    ${EMAIL_TXT}
     Element Should Be Enabled    ${EMAIL_TXT}
-
+    #  Element Should Not Be Enabled    ${EMAIL_TXT}
     Sleep    1h
 ```
 
 
-
-    Click Element   xpath://button[normalize-space()='Log in']
-```
