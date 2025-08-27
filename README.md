@@ -14,6 +14,9 @@ pip install robotframework robotframework-seleniumlibrary
 ````
 pip install playwright
 ````
+````
+playwright install
+````
 
 Installer plugin : Hyper roboframework
 
