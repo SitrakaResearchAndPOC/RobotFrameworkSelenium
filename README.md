@@ -553,6 +553,30 @@ RadioButton_W3Schools
     Unselect Frame
     Sleep    1h
 ```
+## NoCode Playwright testing
+```
+playwright codegen https://demoqa.com/automation-practice-form --target=python --output demoqa_form1.py
+```
+```
+python demoqa_form1.py
+```
 
 
-
+```
+playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/auth/login --target=python --output demoqa_form2.py
+```
+```
+python demoqa_form2.py
+```
+```
+playwright codegen  --help
+```
+```
+playwright codegen  https://demoblaze.com/index.html --browser=firefox
+```
+```
+playwright codegen  https://demoblaze.com/index.html --device="iphone 13"
+```
+```
+playwright codegen  https://demoblaze.com/index.html --viewport-size="1280,720"
+```
