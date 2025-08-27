@@ -290,5 +290,66 @@ RegTest
     # Sleep  1h
 ```
 
+# Chargement de page : connaître la valeur de temps timeout par defaut
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+
+*** Test Cases ***
+RegTest
+    Open Browser    https://demowebshop.tricentis.com/register  chrome
+    Maximize Browser Window
+    Wait Until Page Contains    Register
+    # ${spead}=  get selenium speed
+    # Log To Console   Temps initial : ${spead}
+
+    # Chaque instruction à partir d'ici attend 3s pour chaque execution
+    # Set Selenium Speed    2s
+
+     Select Radio Button    Gender  F
+     Input Text    name:FirstName  David
+     Input Text    name:LastName   John
+     Input Text    name:Email   anhc@gmail.com
+     Input Text    name:Password   davidjohn
+     Input Text    name:ConfirmPassword   davidjohn
+    # Click Element    xpath://input[@id='register-button']
+
+    # ${spead}=  get selenium speed
+    # Log To Console   Temps final : ${spead}
+
+     Sleep  1h
+```
+* La valeur est 5s, voir log de ce test 
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+
+*** Test Cases ***
+RegTest
+    Open Browser    https://demowebshop.tricentis.com/register  chrome
+    Maximize Browser Window
+    Wait Until Page Contains    Register123
+    # ${spead}=  get selenium speed
+    # Log To Console   Temps initial : ${spead}
+
+    # Chaque instruction à partir d'ici attend 3s pour chaque execution
+    # Set Selenium Speed    2s
+
+     Select Radio Button    Gender  F
+     Input Text    name:FirstName  David
+     Input Text    name:LastName   John
+     Input Text    name:Email   anhc@gmail.com
+     Input Text    name:Password   davidjohn
+     Input Text    name:ConfirmPassword   davidjohn
+    # Click Element    xpath://input[@id='register-button']
+
+    # ${spead}=  get selenium speed
+    # Log To Console   Temps final : ${spead}
+
+     Sleep  1h
+```
+
 
 
