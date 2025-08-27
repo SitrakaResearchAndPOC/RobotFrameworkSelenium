@@ -18,3 +18,16 @@ TC1
 ```
 robot TC1.robot
 ```
+## Open Browser
+```
+*** Settings ***
+Library   SeleniumLibrary
+
+*** Variables ***
+
+*** Test Cases ***
+TC1
+    # Les test
+    open browser  https://demo.nopcommerce.com   chrome
+    sleep  1h
+```
