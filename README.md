@@ -33,6 +33,9 @@ TC1
 ```
 
 ## Open Browser with variable
+
+* With chrome
+
 ```
 *** Settings ***
 Library   SeleniumLibrary
@@ -47,6 +50,8 @@ TC1
     sleep  1h
 ```
 
+* With edge
+
 ```
 *** Settings ***
 Library   SeleniumLibrary
@@ -60,6 +65,8 @@ TC1
     open browser  ${URL}  ${BROW}
     sleep  1h
 ```
+
+* With firefox
 
 ```
 *** Settings ***
