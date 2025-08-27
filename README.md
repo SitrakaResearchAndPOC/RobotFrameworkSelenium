@@ -225,7 +225,7 @@ SelectRadioButton_Option3
     Close Browser
 ```
 
-## RadioButton avec publicité
+## RadioButton avec publicités
 ```
 *** Settings ***
 Library    SeleniumLibrary
@@ -245,11 +245,10 @@ test1
     Wait Until Element Is Visible    xpath://label[@for="hobbies-checkbox-3"]    timeout=10s
     Scroll Element Into View    xpath://label[@for="hobbies-checkbox-3"]
     Click Element    xpath://label[@for="hobbies-checkbox-3"]
-    Sleep  1s
+    Sleep  3s
 
     [Teardown]    Close Browser
 
-    Sleep  3s
 ```
 
 
