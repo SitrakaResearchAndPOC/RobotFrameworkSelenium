@@ -225,6 +225,33 @@ SelectRadioButton_Option3
     Close Browser
 ```
 
+## RadioButton avec publicité
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Test Cases ***
+test1
+    # Ouvre Edge et attend que la page soit complètement chargée
+    Open Browser    https://demoqa.com/automation-practice-form    edge
+    Maximize Browser Window
+    Wait Until Page Contains Element    xpath://form[@id="userForm"]    timeout=10s
+
+    # Select Radio Button    gender  Male
+    Click Element    xpath://label[@for="gender-radio-1"]
+    Sleep  2s
+
+    # Sélection de la case Hobbies (Sports)
+    Wait Until Element Is Visible    xpath://label[@for="hobbies-checkbox-3"]    timeout=10s
+    Scroll Element Into View    xpath://label[@for="hobbies-checkbox-3"]
+    Click Element    xpath://label[@for="hobbies-checkbox-3"]
+    Sleep  1s
+
+    [Teardown]    Close Browser
+
+    Sleep  3s
+```
+
 
 ## Timing : 
 
