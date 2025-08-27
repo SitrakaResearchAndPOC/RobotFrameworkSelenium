@@ -348,7 +348,7 @@ RegTest
     # ${spead}=  get selenium speed
     # Log To Console   Temps final : ${spead}
 
-     Sleep  1h
+     Sleep  3s
 ```
 
 * Connaitre le 5s en calculant le temps :
@@ -380,6 +380,76 @@ RegTest
     # ${spead}=  get selenium speed
     # Log To Console   Temps final : ${spead}
 
-     Sleep  1h
+     Sleep  3s
+```
+## Timining Implicit wait
+
+* Test Implicit wait
+
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+
+*** Test Cases ***
+RegTest
+    Open Browser    https://demowebshop.tricentis.com/register  chrome
+    Maximize Browser Window
+    Wait Until Page Contains    Register
+    # ${spead}=  Get Selenium Timeout
+    # Log To Console   Temps timeout par defaut : ${spead}
+
+     Set Selenium Implicit Wait   10s
+
+     Select Radio Button    Gender  F
+
+     # Ajout Erreur
+     Input Text    name:FirstName  David
+
+     Input Text    name:LastName   John
+     Input Text    name:Email   anhc@gmail.com
+     Input Text    name:Password   davidjohn
+     Input Text    name:ConfirmPassword   davidjohn
+    # Click Element    xpath://input[@id='register-button']
+
+    # ${spead}=  get selenium speed
+    # Log To Console   Temps final : ${spead}
+
+     Sleep  3s
 ```
 
+* Implicit wait en calculant le temps de fonctionnement
+
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+
+*** Test Cases ***
+RegTest
+    Open Browser    https://demowebshop.tricentis.com/register  chrome
+    Maximize Browser Window
+    Wait Until Page Contains    Register
+
+    ${spead}=  Get Selenium Implicit Wait
+    Log To Console   Temps Implicit wait par defaut : ${spead}
+
+     Set Selenium Implicit Wait   10s
+
+     Select Radio Button    Gender  F
+
+     # Ajout Erreur
+     Input Text    name:FirstName  David
+
+     Input Text    name:LastName   John
+     Input Text    name:Email   anhc@gmail.com
+     Input Text    name:Password   davidjohn
+     Input Text    name:ConfirmPassword   davidjohn
+    # Click Element    xpath://input[@id='register-button']
+
+    ${spead}=  Get Selenium Implicit Wait
+    Log To Console   Temps Implicit wait final : ${spead}
+
+     Sleep  3s
+
+```
