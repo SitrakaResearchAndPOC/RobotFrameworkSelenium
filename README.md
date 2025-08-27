@@ -234,5 +234,29 @@ RadioButton_W3Schools
     Sleep    1h
 ```
 
+## Timing : 
+
+* Set selenium speed
+
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Test Cases ***
+RegTest
+    Open Browser    https://demowebshop.tricentis.com/register  chrome
+    Maximize Browser Window
+    # Chaque instruction à partir d'ici attend 3s pour chaque execution
+    Set Selenium Speed    3s
+    Select Radio Button    Gender  F
+    Input Text    name:FirstName  David
+    Input Text    name:LastName   John
+    Input Text    name:Email   anhc@gmail.com
+    Input Text    name:Password   davidjohn
+    Input Text    name:ConfirmPassword   davidjohn
+    # Click Element    xpath://input[@id='register-button']
+
+    Sleep  1h
+```
 
 
