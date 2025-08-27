@@ -164,4 +164,75 @@ TestingInputBox
     Sleep    1h
 ```
 
+# Simple RadioButton : 
+```
+*** Settings ***
+Library    SeleniumLibrary
+Suite Teardown    Close All Browsers
+
+*** Variables ***
+${BROWSER}    chrome
+${URL}        https://testpages.herokuapp.com/styled/basic-html-form-test.html
+
+*** Test Cases ***
+SelectRadioButton_Option1
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Sleep    2s
+
+    Select Radio Button    radioval    rd1
+    Radio Button Should Be Set To    radioval    rd1
+    Sleep    2s
+    Close Browser
+
+
+SelectRadioButton_Option2
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Sleep    2s
+
+    Select Radio Button    radioval    rd2
+    Radio Button Should Be Set To    radioval    rd2
+    Sleep    2s
+    Close Browser
+
+
+SelectRadioButton_Option3
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Sleep    2s
+
+    Select Radio Button    radioval    rd3
+    Radio Button Should Be Set To    radioval    rd3
+    Sleep    2s
+    Close Browser
+```
+
+## IFRAME Radiobutton
+```
+*** Settings ***
+Library    SeleniumLibrary
+Suite Teardown    Close All Browsers
+
+*** Variables ***
+${BROWSER}    chrome
+${URL}        https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_radio
+
+*** Test Cases ***
+RadioButton_W3Schools
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Sleep    10s
+
+    # Entrer dans l'iframe
+    Select Frame    xpath://iframe[@id='iframeResult']
+
+    Select Radio Button    fav_language    HTML
+    Radio Button Should Be Set To    fav_language    HTML
+
+    Unselect Frame
+    Sleep    1h
+```
+
+
 
