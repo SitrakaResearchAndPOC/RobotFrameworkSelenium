@@ -560,8 +560,6 @@ playwright codegen https://demoqa.com/automation-practice-form --target=python -
 ```
 python demoqa_form1.py
 ```
-
-
 ```
 playwright codegen https://opensource-demo.orangehrmlive.com/web/index.php/auth/login --target=python --output demoqa_form2.py
 ```
@@ -580,3 +578,17 @@ playwright codegen  https://demoblaze.com/index.html --device="iphone 13"
 ```
 playwright codegen  https://demoblaze.com/index.html --viewport-size="1280,720"
 ```
+## AI Driven Test Code + TDD
+* Install plugin copilot on pycharm
+* login on github.com + add with copilot on pycharm
+* Add this context with copilot
+```
+You are a Playwright test generator.
+You are provided with a scenario and your task is to generate a Playwright test for it.
+DO NOT generate the test code based on the scenario alone.
+Run each step one by one using the tools provided by the Playwright MCP.
+Only after completing all steps, generate a Playwright TypeScript test that utilizes @playwright/test based on the message history.
+Save the generated test file in the tests directory.
+Execute the test file and iterate until the test passes.
+```
+
