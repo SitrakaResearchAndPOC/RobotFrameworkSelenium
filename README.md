@@ -591,4 +591,15 @@ Only after completing all steps, generate a Playwright TypeScript test that util
 Save the generated test file in the tests directory.
 Execute the test file and iterate until the test passes.
 ```
+# Ressources
 
+* [jour1](https://www.youtube.com/playlist?list=PLUDwpEzHYYLseflPNg0bUKfLmAbO2JnE9)
+* [jour2_jour3](https://www.youtube.com/playlist?list=PLUDwpEzHYYLsCHiiihnwl3L0xPspL7BPG)
+* [jour4_1](https://www.youtube.com/watch?v=T0CT2xxC3JM)
+* [jour4_2](https://www.youtube.com/watch?v=cvQFtzj8Qmo)
+* [jour4_3](https://www.youtube.com/watch?v=cNh3_r6UjKk)
+* [jour4_5](https://www.youtube.com/watch?v=paSwmp-z9wc)
+* [jour4_6](https://www.youtube.com/watch?v=FGwtDhjnBMc)
+* [jour4_7](https://www.youtube.com/watch?v=E2DEHOEbzks&pp=0gcJCbIJAYcqIYzv)
+* [jour4_8](https://www.youtube.com/watch?v=blmnQN7YY00&pp=0gcJCbIJAYcqIYzv)
+* [sites_testing1](https://demoqa.com/automation-practice-form)
