@@ -1,0 +1,92 @@
+📘 QCM Robot Framework & Playwright (15 questions)
+1. Compter des éléments dans une page avec Robot Framework (SeleniumLibrary)
+
+Quel mot-clé permet de compter les éléments d’un sélecteur ?
+A) Get Element Count ✅
+B) Count Items
+C) Element Should Be Visible
+
+2. Vérifier si une colonne contient un texte
+
+Quel mot-clé utiliser ?
+A) Table Column Should Contain ✅
+B) Get Table Cell
+C) Element Text Should Be
+
+3. Vérifier si une ligne contient un texte
+
+A) Table Row Should Contain ✅
+B) Element Should Contain
+C) Get Table Row
+
+4. Vérifier si une cellule contient un texte
+
+A) Table Cell Should Contain ✅
+B) Get Table Cell
+C) Element Should Be Visible
+
+5. Vérifier si l’entête contient un texte
+
+A) Table Header Should Contain ✅
+B) Get Element Attribute
+C) Element Should Contain
+
+6. Rôle de codegen avec Playwright
+
+A) Générer du code automatiquement pour enregistrer des scénarios ✅
+B) Compiler le code JavaScript
+C) Lancer le serveur de tests
+
+7. Rôle de target dans une commande Playwright
+
+A) Spécifier la cible (URL ou élément à tester) ✅
+B) Définir le temps d’attente
+C) Changer la langue du navigateur
+
+8. Rôle de output dans une commande Playwright
+
+A) Définir où stocker les fichiers générés (code, rapport, capture) ✅
+B) Sélectionner le navigateur à utiliser
+C) Modifier le viewport
+
+9. Choix du navigateur avec Playwright
+
+A) --browser=chromium ✅
+B) --target=firefox
+C) --set-browser=webkit
+
+10. Choix du device avec Playwright
+
+A) --device="iPhone 12" ✅
+B) --target="mobile"
+C) --browser-device="Pixel"
+
+11. Définir le viewport avec Playwright
+
+A) --viewport-size=1280x720 ✅
+B) --resize=1280x720
+C) --screen=1280x720
+
+12. C’est quoi un assert ?
+
+A) Une instruction qui vérifie une condition ✅
+B) Une boucle de test répétitive
+C) Un mot-clé pour fermer le navigateur
+
+13. C’est quoi le TDD (Test Driven Development) ?
+
+A) Une approche où les tests sont écrits avant le code ✅
+B) Un outil de gestion de base de données
+C) Une méthode pour compiler le code plus vite
+
+14. Commande pour faire du smoke testing avec Robot Framework
+
+A) robot --include smoke tests/ ✅
+B) robot --smoke tests/
+C) robot --only=smoke tests/
+
+15. Est-ce que Robot Framework peut piloter aussi Playwright ?
+
+A) Oui, avec la librairie Browser ✅
+B) Non, uniquement Selenium
+C) Oui, mais uniquement via Puppeteer
