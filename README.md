@@ -21,7 +21,7 @@ playwright install
 Installer plugin : Hyper roboframework
 
 
-## Altermatives pour playwright avec des problèmes :
+## Alternatives pour playwright avec des problèmes :
 * Telecharger nvm
 [nvm](https://github.com/coreybutler/nvm-windows/releases/tag/1.2.2)
 * Installations : 
