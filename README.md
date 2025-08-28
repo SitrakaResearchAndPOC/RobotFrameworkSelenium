@@ -603,3 +603,4 @@ Execute the test file and iterate until the test passes.
 * [jour4_7](https://www.youtube.com/watch?v=E2DEHOEbzks&pp=0gcJCbIJAYcqIYzv)
 * [jour4_8](https://www.youtube.com/watch?v=blmnQN7YY00&pp=0gcJCbIJAYcqIYzv)
 * [sites_testing1](https://demoqa.com/automation-practice-form)
+* [sites_testing2](https://demowebshop.tricentis.com/register)
