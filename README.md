@@ -11,20 +11,10 @@ pip install selenium webdriver-manager
 ```
 pip install robotframework robotframework-seleniumlibrary
 ````
-````
-pip install playwright
-````
-````
-playwright install
-````
-
-Installer plugin : Hyper roboframework
-
-
-## Alternatives pour playwright avec des problèmes :
-* Telecharger nvm
+* Avant d'installer codegen :
+Telecharger nvm </br>
 [nvm](https://github.com/coreybutler/nvm-windows/releases/tag/1.2.2)
-* Installations : 
+Installations </br> 
 ```
 nvm install 20
 ```
@@ -34,6 +24,22 @@ nvm use 20
 ```
 node -v   # → v20.x.x
 ```
+
+* Installer playwright
+
+````
+pip install playwright
+````
+````
+playwright install
+````
+## Cas de problèmes persistant uniquement
+Remove-Item -Recurse -Force "C:\Users\Esti\AppData\Local\ms-playwright" </br>
+ Remove-Item -Recurse -Force "C:\Users\Esti\AppData\Local\Temp\playwright_*"
+
+Installer plugin : Hyper roboframework
+
+## Alternatives pour playwright avec des problèmes :
 ```
 npm install -g playwright
 ```
