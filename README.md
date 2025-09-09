@@ -38,9 +38,10 @@ print("✅ Test Passed")
 # 8) Fermer le navigateur
 driver.quit()
 ```
+
 * Correction  EDGE
+
 <details>
-```
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -124,7 +125,8 @@ print("✅ Test Passed")
 # 8) Fermer le navigateur
 driver.quit()
 ```
-* details
+* Correction chrome
+<details>
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
