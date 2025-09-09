@@ -42,6 +42,7 @@ driver.quit()
 * Correction  EDGE
 
 <details>
+
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -127,6 +128,7 @@ driver.quit()
 ```
 * Correction chrome
 <details>
+
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
