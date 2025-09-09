@@ -80,7 +80,12 @@ print("✅ Test Passed")
 # 8) Fermer le navigateur
 driver.quit()
 ```
-* Assertion modifiée :
+</details>
+
+* Corrections EDGE + Assertion quand la page contient des inner text :
+
+<details>
+
 ```
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -122,7 +127,6 @@ print("✅ Test Passed")
 # 8) Fermer le navigateur
 driver.quit()
 ```
-
 
 </details>
 
