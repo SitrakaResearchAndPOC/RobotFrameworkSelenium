@@ -17,13 +17,13 @@ driver.get("https://opensource-demo.orangehrmlive.com")
 time.sleep(2)
 
 # 3) Entrer le username
-driver.find_element(By.NAME, "username").send_keys("Admin")
+driver.find_element(By.NAME, "???").send_keys("???")
 
 # 4) Entrer le mot de passe
-driver.find_element(By.NAME, "password").send_keys("admin123")
+driver.find_element(By.NAME, "???").???("???")
 
 # 5) Cliquer sur Login
-driver.find_element(By.XPATH, "//button[@type='submit']").click()
+driver.find_element(By.XPATH, "???").click()
 
 # 6) Capturer le titre
 time.sleep(2)
