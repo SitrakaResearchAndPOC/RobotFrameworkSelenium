@@ -80,7 +80,54 @@ print("✅ Test Passed")
 # 8) Fermer le navigateur
 driver.quit()
 ```
+* Assertion modifiée :
+```
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+# 🚀 Lancer Edge avec le DriverManager intégré de Selenium
+driver = webdriver.Edge()   # Plus besoin de Service() ni webdriver_manager
+driver.maximize_window()
+
+# 2) Ouvrir l’URL
+driver.get("https://opensource-demo.orangehrmlive.com")
+
+# (Optionnel) pause pour laisser charger la page
+time.sleep(2)
+
+# 3) Entrer le username
+driver.find_element(By.NAME, "username").send_keys("Admin")
+time.sleep(2)
+
+# 4) Entrer le mot de passe
+driver.find_element(By.NAME, "password").send_keys("admin123")
+
+
+# 5) Cliquer sur Login
+driver.find_element(By.XPATH, "//button[@type='submit']").click()
+
+# 6) Capturer le titre
+time.sleep(2)
+actual_title = driver.title
+print("Titre capturé :", actual_title)
+
+time.sleep(2)
+
+# 7) Vérifier le titre attendu avec assert
+expected_word = "Time at Work"
+assert expected_word in driver.page_source, f"❌ Test Failed : attendu '{expected_title}', obtenu '{actual_title}'"
+print("✅ Test Passed")
+
+# 8) Fermer le navigateur
+driver.quit()
+```
+
+
 </details>
+
+
+
 
 * Exercices pour chrome
 ```
