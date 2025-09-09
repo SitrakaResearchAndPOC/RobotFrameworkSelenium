@@ -235,10 +235,10 @@ driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com")
 time.sleep(5)
 
-driver.find_element(By.NAME, "username").send_keys("Admin")
-driver.find_element(By.NAME, "password").send_keys("admin123")
+driver.find_element(By.NAME, "???").send_keys("???")
+driver.find_element(By.NAME, "???").???("???")
 time.sleep(2)
-driver.find_element(By.XPATH, "//button[@type='submit']").click()
+driver.find_element(By.XPATH, ???).click()
 time.sleep(5)
 
 actual_title = driver.title
@@ -249,6 +249,7 @@ assert actual_title == expected_title, f"❌ Test Failed : attendu '{expected_ti
 print("✅ Test Passed")
 
 driver.quit()
+
 ```
 
 * correction firefox
@@ -269,10 +270,10 @@ driver.maximize_window()
 driver.get("https://opensource-demo.orangehrmlive.com")
 time.sleep(5)
 
-driver.find_element(By.NAME, "???").send_keys("???")
-driver.find_element(By.NAME, "???").???("???")
+driver.find_element(By.NAME, "username").send_keys("Admin")
+driver.find_element(By.NAME, "password").send_keys("admin123")
 time.sleep(2)
-driver.find_element(By.XPATH, ???).click()
+driver.find_element(By.XPATH, "//button[@type='submit']").click()
 time.sleep(5)
 
 actual_title = driver.title
@@ -283,6 +284,7 @@ assert actual_title == expected_title, f"❌ Test Failed : attendu '{expected_ti
 print("✅ Test Passed")
 
 driver.quit()
+
 ```
 </details>
 
