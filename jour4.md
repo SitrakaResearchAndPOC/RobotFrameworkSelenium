@@ -1,3 +1,34 @@
+## Explicit wait
+
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+**** Variables ***
+${BROWSER}    chrome
+${URL}     https://opensource-demo.orangehrmlive.com
+${USER}     Admin
+${PASS}    admin123
+${EXPECTED_WORD}      Time at Work
+
+*** Test Cases ***
+TC1
+     Open Browser     ${URL}     ${BROWSER}
+     Wait Until Element Is Visible    name:username     10s
+
+     Set Selenium Speed    2s
+
+     Input Text       name:username    ${USER}
+     Input Text     name:password     ${PASS}
+     Click Element    xpath://button[@type='submit']
+
+     Wait Until Page Contains       ${EXPECTED_WORD}   10s
+     # Sleep   10s
+     # Assertions :
+     # Page Should Contain   ${EXPECTED_WORD}
+     # Sleep    4s
+```
+
 ## Handle alert
 
 
