@@ -1,3 +1,31 @@
+## Temps d'attente
+```
+*** Settings ***
+Library   SeleniumLibrary
+
+**** Variables ***
+${BROWSER}    chrome
+${URL}     https://opensource-demo.orangehrmlive.com
+${USER}     Admin
+${PASS}    admin123
+
+${EXPECTED_WORD}   Time at Work
+
+*** Test Cases ***
+TC1
+     Open Browser     ${URL}     ${BROWSER}
+     Sleep    2s 
+     Input Text       name:username    ${USER}
+    Sleep    2s 
+    Input Text     name:password     ${PASS}
+    Sleep    2s 
+    Click Element    xpath://button[@type='submit'] 
+    Sleep   2s 
+    # Assertions : 
+    Page Should Contain   ${EXPECTED_WORD} 
+    Sleep    4s
+```
+
 ## Explicit wait
 
 ```
