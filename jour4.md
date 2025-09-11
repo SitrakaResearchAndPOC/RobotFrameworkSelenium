@@ -1,3 +1,42 @@
+## Portée variable keyword personnalisé : TC
+
+
+```
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${URL1}    https://google.com
+${URL2}    https://youtube.com
+
+
+*** Test Cases ***
+TC1
+#    OpenBrowserTC1
+     OpenBrowserTC    ${URL1}  
+
+
+TC2
+    #OpenBrowserTC2
+     OpenBrowserTC    ${URL2}  
+
+*** Keywords ***
+# OpenBrowserTC1
+#    Log To Console    valeur de url dans TC1: ${URL1}
+#    Open Browser    ${URL1}   chrome
+    
+    
+# OpenBrowserTC2
+#    Log To Console    valeur de url dans TC2: ${URL2}
+#    Open Browser    ${URL2}   chrome
+    
+OpenBrowserTC
+    [Arguments]    ${URL}
+    Log To Console    valeur de url dans TC: ${URL}
+    Open Browser    ${URL}   chrome       
+ 
+ ```
+
 ## Temps d'attente
 ```
 *** Settings ***
